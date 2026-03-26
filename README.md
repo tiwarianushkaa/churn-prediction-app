@@ -1,15 +1,22 @@
 # Customer Churn Prediction App
 
+## Live Application
+https://churn-prediction-app-2eeutfkdtjvzsfccgfrtmy.streamlit.app/
+
 ## Overview
-This project is an end-to-end machine learning application that predicts customer churn based on historical data. It includes data preprocessing, model training, evaluation, and an interactive web interface for real-time predictions.
+This project is an end-to-end machine learning application designed to predict customer churn using historical customer data. It covers the complete data science workflow including data preprocessing, feature engineering, model training, evaluation, and deployment through an interactive web application.
+
+The application allows users to upload a dataset, analyze customer churn patterns, and make real-time predictions using a trained machine learning model.
 
 ## Features
-- Data cleaning and preprocessing pipeline
-- Automatic detection and handling of target variable
+- End-to-end data processing pipeline
+- Automatic detection of target variable (Churn / Exited / Target)
+- Data cleaning, handling missing values, and encoding
 - Machine learning model using Random Forest
 - Model evaluation with accuracy and classification report
-- Interactive web application using Streamlit
-- Real-time customer churn prediction with probability score
+- Interactive Streamlit web interface
+- Real-time prediction with probability score
+- Dynamic feature handling for new input data
 
 ## Tech Stack
 - Python
@@ -26,42 +33,49 @@ churn-prediction/
 │── requirements.txt
 │── README.md
 
+## How It Works
+1. User uploads a CSV dataset
+2. Data is cleaned and preprocessed automatically
+3. Features are encoded using one-hot encoding
+4. Model is trained using Random Forest Classifier
+5. Performance metrics are displayed
+6. User can input new customer data for prediction
+7. Model outputs churn prediction with probability
+
 ## Installation
 
-1. Clone the repository:
+Clone the repository:
 git clone https://github.com/tiwarianushkaa/churn-prediction-app.git
 cd churn-prediction-app
 
-2. Create and activate a virtual environment (optional but recommended):
-conda create -n churn_env python=3.10
-conda activate churn_env
-
-3. Install dependencies:
+Install dependencies:
 pip install -r requirements.txt
 
-## Usage
-
-Run the Streamlit application:
+Run the application:
 streamlit run app.py
-
-Then open the provided local URL in your browser.
 
 ## Input Requirements
 - CSV file containing customer data
-- Dataset should include a target column such as "Churn", "Exited", or similar
+- Dataset must include a target column such as:
+  - Churn
+  - Exited
+  - Target
 
 ## Model Details
 - Algorithm: Random Forest Classifier
+- Train/Test Split: 80/20
 - Evaluation Metrics:
   - Accuracy
-  - Classification Report (Precision, Recall, F1-score)
+  - Precision
+  - Recall
+  - F1-score
 
 ## Future Improvements
 - Hyperparameter tuning
-- Model persistence (saving/loading trained model)
+- Model persistence (save/load trained model)
 - Advanced visualizations
-- Support for additional datasets
+- Support for multiple datasets
 - Improved feature engineering
 
 ## License
-This project is for educational and demonstration purposes.
+This project is developed for educational and demonstration purposes.
